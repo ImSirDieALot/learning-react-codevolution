@@ -139,7 +139,21 @@
 ### Redux
 ### Utilities
 
+### Fragment
+    Fragments lets group list of children elements without adding extra nodes to the dom
 
+### Pure Components
+    A pure component implements `shouldComponentUpdate` with a shallow props and state comparison, but a regular component doesn't implement this method. It always return true by default.
+    ##### Shallow Comparison
+        SC of prevState with currentState 
+        SC of prevProps with currentProps
+            Components only re-render if there is a difference returned in SC
+        Why?
+            Prevents unnecessary render and gives performance boost.
+        - Primitive Types
+            For 2 primitive types like string, number, a (SC) b returns true if a and b have the same value and are of the same type.
+        - Complex Types
+            For complex types like objects, a (SC) b return true if a and b reference the exact same object
 ### Some Interview related topics
 What do you like and dislike about React?
 - Love the unidirectional flow from parent to child
