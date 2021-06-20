@@ -1,0 +1,6 @@
+{
+  "editor.fontSize": 18,
+  "editor.fontFamily": "'Fire Code', 'Fira Code SemiBold', monospace",
+  "workbench.settings.openDefaultKeybindings": true,
+  "editor.tabSize": 2
+}
