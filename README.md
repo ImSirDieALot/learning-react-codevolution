@@ -196,3 +196,14 @@ What is VDOM and DOM?
 ### Higher Order Components
     A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
     A pattern where a function takes a component as an argument and returns a new component (also called EnhancedComponent)
+
+### CONTEXT
+    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    Steps:
+        1. Create the `userContext` or any context using the `React.createContext()` method from react. Make sure to export the Provider and Consumer.
+        2. At the top level, include the provider component and provide value using `value` attribute
+        3. Use the consumer component in whatever component you need. Pass the value to the consumer component in the child component.
+    We can set default value to the context.
+    ContextType - another way similar to consumer
+        Limitations - Works only with Class components
+                    - Only single context at a time
