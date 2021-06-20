@@ -131,9 +131,11 @@
         Methods
         - componentWillUnmount
     Error Handling - When there is an error during rendering, in lifecycle method or in the constructor of any child
+        React unmounts the whole tree when errors happen.
+        Error Boundary - a class component that implements either one or both of the lifecycle methods becomes an error boundary
         Methods
-        - static getDerivedStateFromProps,
-        - componentDidCatch
+        - static getDerivedStateFromProps(error)
+        - componentDidCatch(error, info)
 ### HTTP
 ### Routing
 ### Redux
@@ -142,6 +144,10 @@
 ### Fragment
     Fragments lets group list of children elements without adding extra nodes to the dom
 
+### Portals
+    Event Bubbling - Event fired from inside a portal will propagate to ancestor in the containing react tree even though they are not in the same DOM tree
+    https://codesandbox.io/s/00254q4n6p
+    https://codepen.io/gaearon/pen/jGBWpE
 ### Pure Components
     A pure component implements `shouldComponentUpdate` with a shallow props and state comparison, but a regular component doesn't implement this method. It always return true by default.
     ##### Shallow Comparison
