@@ -136,7 +136,10 @@
         Methods
         - static getDerivedStateFromProps(error)
         - componentDidCatch(error, info)
-### HTTP
+### HTTP and React
+    - React doesn't have a particular way for fetch/send data
+    - Get the data into state or props
+    - Use HTTP library - axios (preferred), fetch (more standardized)
 ### Routing
 ### Redux
 ### Utilities
