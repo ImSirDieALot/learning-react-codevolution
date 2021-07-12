@@ -197,8 +197,8 @@ What is VDOM and DOM?
         + Form elements' value is controlled by react
 
 ### Higher Order Components
-    A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
-    A pattern where a function takes a component as an argument and returns a new component (also called EnhancedComponent)
+    + A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
+    + A pattern where a function takes a component as an argument and returns a new component (also called EnhancedComponent)
 
 ### CONTEXT
     Context provides a way to pass data through the component tree without having to pass props down manually at every level.
@@ -210,3 +210,38 @@ What is VDOM and DOM?
     ContextType - another way similar to consumer
         Limitations - Works only with Class components
                     - Only single context at a time
+https://medium.com/@stevenjinyi/study-sheet-for-react-interview-questions-2020-2fe25b8fa316#5245
+### React Hooks
+    - Hooks are new feature which allow us to use React feature without having to write a class. Ex: State of Component
+    - Hooks dont work in class components
+    ##### Why Hooks?
+        - Understanding `this` keyword in JS
+        - remember binding event handlers in class components
+        - minification of classes is sometimes doesn't go well and reloading becomes unreliable
+        - no particular way to reuse stateful component logic. HOC and render props address this problem. but restructuring the component makes it hard.
+        - Hooks let us use/share stateful logic in a better way
+        - complex components become hard to understand
+        - Data fetching and event listeners are in componentDidMount, componentDidUpdate and componentWillUnmount
+        - because of stateful logic - breaking up the components into smaller ones is hard
+    ##### Note worthy points
+        - 16.8 or higher version
+        - optional
+        - dont contain any breaking changes and 100% backward compatible
+        - classes won't be removed from React
+        - hooks provide more direct API to the React concepts
+    ##### Rules of Hooks
+        - Only call hooks at top level of the React function. Don't call inside loops, conditions or nested functions
+        - Only call hookds from React Functions. Call them from within the react functional components and not just any regular JS function
+    ##### useState
+        - useState(): This hook/function accepts an argument which is the initialState and returns the currentState and method that updates the initialState
+        - useState() does not automatically merge the states. merge manually
+        - the state doesn't have to be an object as in class
+        - useState hook returns an array with 2 elements - state and state setter
+    ##### useEffect
+        - 
+    ##### useContext
+        - 
+    ##### useReducer
+        - state management - alternative to useState
+        - useState is built using useReducer
+        - 
